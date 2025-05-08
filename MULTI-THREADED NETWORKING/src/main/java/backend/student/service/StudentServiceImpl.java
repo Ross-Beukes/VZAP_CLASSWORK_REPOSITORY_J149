@@ -21,7 +21,9 @@ public class StudentServiceImpl implements StudentService{
                 if (studentOptional.isPresent()) {
                     return studentOptional.get();
                 }
-            }throw new IllegalArgumentException("Invalid ID Number");
+            }else {
+                throw new IllegalArgumentException("Invalid ID Number");
+            }
         }
         throw new IllegalArgumentException("Invalid Student!");
     }
